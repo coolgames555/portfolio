@@ -33,3 +33,27 @@
   border-radius: 5px;
   font-weight: bold;
 }
+  .typeH1 {
+    font-family: monospace;
+    overflow: hidden; /* Hides the text until revealed */
+    border-right: .15em solid orange; /* The cursor */
+    white-space: nowrap; /* Keeps text on a single line */
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    /* The steps() number must match the total character count */
+    animation: 
+      typing 3.5s steps(4, end),
+      blink-caret .75s step-end infinite;
+  }
+
+  /* The typing animation */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* The cursor animation */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }

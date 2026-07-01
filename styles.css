@@ -1,0 +1,35 @@
+/* Fullscreen Video Style */
+.fullscreen-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Splash Screen Overlay */
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Solid background so they can't see the frozen video */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Sits on top of the video */
+  transition: opacity 0.5s ease; /* Smooth fade out */
+}
+
+#start-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
